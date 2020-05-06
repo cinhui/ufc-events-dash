@@ -10,11 +10,13 @@ import pandas as pd
 import time
 import os
 
-server = flask.Flask('app')
-server.secret_key = os.environ.get('secret_key', 'secret')
+# server = flask.Flask('app')
+# server.secret_key = os.environ.get('secret_key', 'secret')
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css','https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css']
 app = dash.Dash(__name__, external_stylesheets=[external_stylesheets,dbc.themes.DARKLY])# dbc.themes.BOOTSTRAP])
+
+server = app.server
 
 app.title = 'UFC'
 app.css.config.serve_locally = False
