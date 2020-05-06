@@ -18,7 +18,7 @@ app = dash.Dash(__name__, external_stylesheets=[external_stylesheets,dbc.themes.
 
 server = app.server
 
-app.title = 'UFC'
+app.title = 'UFC Events'
 app.css.config.serve_locally = False
 app.scripts.config.serve_locally = False
 
@@ -51,7 +51,7 @@ _body = dbc.Container(
                                 'color': colors['text']
                             }),
                         html.P(
-                            "Data includes past events and scheduled futured events. Cancelled and postponed events are excluded.",
+                            "Data includes past events and scheduled futured events as of May 9, 2020. Cancelled and postponed events are excluded.",
                             style={
                                 'color': colors['text']
                             }
